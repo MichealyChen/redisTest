@@ -13,10 +13,15 @@ spring:
 #    minIdle: 5
 #    maxActive: 50
 #    # 配置获取连接等待超时的时间
-#    maxWait: 60000
+#    maxWait: 670000
 #    poolPreparedStatements: true
+#    max-evictable-idle-time-millis: 8888888
+#    timeBetweenEvictionRunsMillis: 60000
+#    kill-when-socket-read-timeout: true
+#    time-between-log-stats-millis: 66666
   profiles:
     include: redis,datasource
+
 
 #  redis:
 #    sentinel:
