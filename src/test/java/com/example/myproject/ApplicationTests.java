@@ -1,6 +1,7 @@
 package com.example.myproject;
 
 import com.example.myproject.dao.borrow.FinancialBorrowDetailMapper;
+import com.example.myproject.redis.RedisSentinelUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeansException;
@@ -29,6 +30,10 @@ public class ApplicationTests {
     @Autowired
     private StringRedisTemplate redis;
 
+    @Autowired
+    private RedisSentinelUtil util;
+
+
 //    @Autowired
 //    Jedis jedis;
 
@@ -49,6 +54,12 @@ public class ApplicationTests {
         System.out.println(redis.opsForValue().get("ssss"));
     }
 
+    @Test
+    public void redisTest2() {
+
+        boolean cyx = util.setLock("cyx", 555555);
+        System.out.println(cyx);
+    }
 
 
 

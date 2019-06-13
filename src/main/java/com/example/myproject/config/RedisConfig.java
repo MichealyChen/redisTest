@@ -31,6 +31,7 @@ import java.util.Set;
 
 @Configuration
 public class RedisConfig {
+
     @Autowired
     private RedisProperties redisProperties;
 
