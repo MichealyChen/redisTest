@@ -1,0 +1,10 @@
+@startuml
+
+A -> B: do something
+B -> A: do something
+B -> B: do something
+A -> C: do something
+
+B -> C: do something
+
+@enduml

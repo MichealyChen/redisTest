@@ -1,0 +1,11 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Context.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
+
+System(systemAlias, "System", "这可以看作系统上下文(Context)")
+Container(containerAlias, "Container", "这是Container")
+Person(personAlias, "Person", "这可以看作是组件(Component)")
+
+Rel(personAlias, containerAlias, "Label", "设置关联关系")
+@enduml
