@@ -25,7 +25,7 @@ public class DataSourcesConfig {
      */
     @Primary
     @Bean(name = "writeDataSource")
-    @ConfigurationProperties("spring.datasource")
+    @ConfigurationProperties("spring.mydatasource")
     public DataSource writeDataSource() {
         return new DruidDataSource();
     }

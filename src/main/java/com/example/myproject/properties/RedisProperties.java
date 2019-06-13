@@ -11,8 +11,8 @@ import java.util.List;
 
 @Component
 @Data
-@PropertySource(value = "classpath:/config/application-redis.yml")
-@ConfigurationProperties(prefix = "spring.redis")
+@PropertySource(value = "classpath:/application-redis.yml")
+@ConfigurationProperties(prefix = "spring.cache")
 public class RedisProperties {
 
     private String master;
