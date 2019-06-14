@@ -23,13 +23,13 @@ spring:
     include: redis,datasource
 
 
-#  redis:
-#    sentinel:
-#      master: r2
-#      nodes:
-#       - 192.168.1.231:56379
-#       - 192.168.1.232:56379
-#       - 192.168.1.235:56379
+  redis:
+    sentinel:
+      master: r2
+      nodes:
+       - 192.168.1.231:56379
+       - 192.168.1.232:56379
+       - 192.168.1.235:56379
 #    database: 0
 #    timeout: 60000
 #    jedis:

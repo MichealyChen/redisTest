@@ -44,13 +44,13 @@ public class RedisSentinelUtil {
     }
 
 
-    public boolean setLock(String key, long expire) {
+    public boolean setLock(String key, String requestId,int expire) {
         try {
             Jedis jedis = pool.getResource();
-            String uuid = UUID.randomUUID().toString();
+
             SetParams setParams = new SetParams();
-            setParams.nx().px(expire);
-            return "OK".equals(jedis.set(key, uuid, setParams));
+            setParams.nx().ex(expire);
+            return "OK".equals(jedis.set(key, requestId, setParams));
         } catch (Exception e) {
             log.error("set redis occured an exception", e);
         }

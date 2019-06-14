@@ -57,12 +57,12 @@ public class MyTest {
 //        System.out.println(redis.opsForValue().get("ssss11"));
 //    }
 
-    @Test
-    public void redisTest2() {
-
-        boolean cyx = util.setLock("cyx", 55);
-        System.out.println(cyx);
-    }
+//    @Test
+//    public void redisTest2() {
+//
+//        boolean cyx = util.setLock("cyx", 55);
+//        System.out.println(cyx);
+//    }
 
 
 }

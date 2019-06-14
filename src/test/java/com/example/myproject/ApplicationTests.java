@@ -57,7 +57,14 @@ public class ApplicationTests {
     @Test
     public void redisTest2() {
 
-        boolean cyx = util.setLock("cyx", 555555);
+        boolean cyx = util.setLock("cyx", "b4d4a940-89db-4487-abde-da1b616ff50a",44);
+        System.out.println(cyx);
+    }
+
+    @Test
+    public void redisTest3() {
+
+        boolean cyx = util.releaseLock("cyx","b4d4a940-89db-4487-abde-da1b616ff50a");
         System.out.println(cyx);
     }
 

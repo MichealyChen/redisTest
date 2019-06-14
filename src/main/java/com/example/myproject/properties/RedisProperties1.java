@@ -13,7 +13,22 @@ import java.util.List;
 @Data
 @PropertySource(value = "classpath:/application-redis.yml")
 @ConfigurationProperties(prefix = "spring.cache")
-public class RedisProperties {
+public class RedisProperties1 {
+
+    /**
+     * Redis server host.
+     */
+    private String host = "192.168.1.232";
+
+    /**
+     * Login password of the redis server.
+     */
+    private String password;
+
+    /**
+     * Redis server port.
+     */
+    private int port = 6379;
 
     private String master;
 
