@@ -23,6 +23,8 @@ spring:
     include: redis,datasource
 
 
+
+
   redis:
     sentinel:
       master: r2
@@ -43,8 +45,14 @@ spring:
 
 mybatis:
   # 映射文件所在路径
-  mapper-locations: classpath:mapper/borrow/*.xml
+  mapper-locations: classpath:mapper/*/*.xml
   # pojo类所在包路径
+
+threadpool:
+  core-pool-size: 10
+  max-pool-size: 20
+  queue-capacity: 1000
+  keep-alive-seconds: 300
 
 
 

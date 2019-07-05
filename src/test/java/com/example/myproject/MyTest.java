@@ -15,6 +15,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisSentinelPool;
 
 import java.io.InputStream;
+import java.lang.reflect.Method;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,7 @@ public class MyTest {
         return pool.getResource();
     }
 
-    @Test
+//    @Test
     public void redistest(){
         getJedis().set("ssss11","44444444");
         System.out.println(getJedis().get("ssss11"));
@@ -68,13 +69,10 @@ public class MyTest {
 //    }
 
     @Test
-    public void redisTest2() {
+    public void redisTest2() throws NoSuchMethodException {
 
-
-       String[] s={"ss","s"};
-        String[] clone = s.clone();
-        System.out.println(clone.toString());
-
+        Method method = MyTest.class.getDeclaredMethod("redistest");
+        System.out.println(method);
     }
 
     public static void main(String[] args) {
@@ -84,7 +82,7 @@ public class MyTest {
         System.out.println("x "+x);
         System.out.println("x1 "+y);
     }
-
+    public void test() {}
     private static void getOprate(String x, String y) {
 //        x.(y);
         y=x;

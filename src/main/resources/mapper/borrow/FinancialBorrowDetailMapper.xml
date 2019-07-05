@@ -45,9 +45,9 @@
     </foreach>
   </update>
 
-  <select id="selectMydata" resultType="map">
+  <select id="selectMydata" resultType="java.util.Map">
 
-select * from t_receiv_user_bank_info
+      select * from t_receiv_user_bank_info
 
   </select>
 
